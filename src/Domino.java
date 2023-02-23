@@ -37,8 +37,26 @@ public class Domino {
         if (top > bottom) flip();
     }
     public int compareTo(Domino other){
-        int compare;
-        int sub;
+        this.settle();
+        other.settle();
+        if(this.top < other.top){
+            return -1;
+        }
+        else if (this.top > other.top){
+            return 1;
+        }
+        else{
+            if(this.bottom < other.bottom){
+                return -1;
+            }
+            else if(this.bottom > other.bottom){
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+        /*int sub;
         if(getTop()<getBottom()){
             compare = getTop();
             sub = getBottom();
@@ -65,6 +83,8 @@ public class Domino {
             return 0;
         }
         return 0;
+
+         */
     }
 
     public int compareToWeight(Domino other){
