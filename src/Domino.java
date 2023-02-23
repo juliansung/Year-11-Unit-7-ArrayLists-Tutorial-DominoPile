@@ -4,8 +4,8 @@ public class Domino {
     private int bottom;
 
     public Domino(){
-        this.top=0;
-        this.bottom=0;
+        top=0;
+        bottom=0;
     }
 
     public Domino(int top, int bottom){
@@ -29,13 +29,12 @@ public class Domino {
         return getTop()+"/"+getBottom();
     }
     public void flip(){
-        int temp = 0;
-        this.top=temp;
-        this.bottom=top;
-        temp=this.bottom;
+        int temp = top;
+        top=bottom;
+        bottom=temp;
     }
     public void settle(){
-        if(getBottom()>getTop()) flip();
+        if (top > bottom) flip();
     }
     public int compareTo(Domino other){
         int compare;
@@ -69,7 +68,7 @@ public class Domino {
     }
 
     public int compareToWeight(Domino other){
-        int total = getTop() + getBottom();
+        int total = this.getTop() + this.getBottom();
         int total2 = other.getTop() + other.getBottom();
         if(total<total2) return -1;
         else if(total2<total) return 1;

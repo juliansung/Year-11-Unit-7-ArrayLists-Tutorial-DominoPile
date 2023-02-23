@@ -77,7 +77,7 @@ public class DominoPileTester {
         int top = 0;
         int bottom = 0;
         boolean allInSameOrder = true;
-        for (int i = 0; i < dominoPile.getPile().size(); i++) {
+        for (int i = 0; i < dominoPile.getPile().size()-1; i++) {
             if (!(dominoPile.getPile().get(i).getTop() == top && dominoPile.getPile().get(i).getBottom() == bottom)) allInSameOrder = false;
 
             if (bottom == 6) {
@@ -103,7 +103,7 @@ public class DominoPileTester {
         int top = 0;
         int bottom = 0;
         boolean allInSameOrder = true;
-        for (int i = 0; i < dominoPile.getPile().size(); i++) {
+        for (int i = 0; i < dominoPile.getPile().size()-1; i++) {
             if (!(dominoPile.getPile().get(i).getTop() == top && dominoPile.getPile().get(i).getBottom() == bottom)) allInSameOrder = false;
 
             if (bottom == 6) {

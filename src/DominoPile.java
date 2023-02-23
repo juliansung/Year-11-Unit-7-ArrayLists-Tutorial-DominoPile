@@ -2,12 +2,16 @@ import java.util.ArrayList;
 
 public class DominoPile {
     ArrayList<Domino> dominos = new ArrayList();
-    public void newStack6() {
-        for (int i = 0; i < 6; i++){
-            for(int j=0; j <= i; j++){
-                Domino domino = new Domino(i,j);
-                dominos.add(domino);
+
+    public void newStack6(){
+        int i = 0;
+        int j = 0;
+        for(int num = 0; num <= 6; num++) {
+            for(i = j; i < 6; i++) {
+                dominos.add(new Domino(i,j));
             }
+            j++;
+            dominos.add(new Domino(i,j));
         }
     }
 
