@@ -7,11 +7,11 @@ public class DominoPile {
         int i = 0;
         int j = 0;
         for(int num = 0; num <= 6; num++) {
-            for(i = j; i < 6; i++) {
-                dominos.add(new Domino(i,j));
+            for(i = num; i <= 6; i++) {
+                dominos.add(new Domino(num,i));
             }
-            j++;
-            dominos.add(new Domino(i,j));
+//            j++;
+//            dominos.add(new Domino(i,j));
         }
     }
 
